@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+* @package    Optimiseweb_ImprovedSearch
+* @author     Kathir Vel (sid@optimiseweb.co.uk)
+* @copyright  Copyright (c) 2013 Optimise Web Limited
+* @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+*/
+-->
+<config>
+
+    <tabs>
+        <optimisewebconfig translate="label comment" module="ow_improvedsearch">
+            <label>Optimise Web</label>
+            <sort_order>0</sort_order>
+        </optimisewebconfig>
+    </tabs>
+
+    <sections>
+        
+        <optimisewebimprovedsearch translate="label comment" module="ow_improvedsearch">
+            <label>Improved Search</label>
+            <tab>optimisewebconfig</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>99999</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+
+                <general translate="label comment" module="ow_improvedsearch">
+                    <label>Improved Search</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label tooltip comment" module="ow_improvedsearch">
+                            <label>Enable?</label>
+                            <tooltip><![CDATA[
+                                Replaces Magento's default 'OR' search query with 'AND'.<br>
+                                For example, a standard search with multiple words (i.e. 'Red Chair') will split the phrases into separate words and seaches the products for either of the words.<br>
+                                This would give a lot of irrelevant matches.<br>
+                                Everything that contains 'Red' OR 'Chair' will appear in the results.<br>
+                                With this module enabled, only the products that match 'Red' AND 'Chair' will be returned.]]>
+                            </tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                    </fields>
+                </general>
+
+            </groups>
+        </optimisewebimprovedsearch>
+        
+    </sections>
+    
+</config>
